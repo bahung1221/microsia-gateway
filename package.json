@@ -1,0 +1,61 @@
+{
+  "name": "microsia-gateway",
+  "version": "0.0.2",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./lib --fix",
+    "test": "nyc mocha --exit",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consocia/microsia-gateway.git"
+  },
+  "keywords": [
+    "apigateway",
+    "microservice-apigateway",
+    "microsia-apigateway",
+    "microservices",
+    "microservice",
+    "micro-services",
+    "micro-service",
+    "micro",
+    "transport",
+    "nats"
+  ],
+  "author": "info@consocia.io",
+  "license": "ISC",
+  "description": "ApiGateway for microsia (https://github.com/consocia/microsia)",
+  "bugs": {
+    "url": "https://github.com/consocia/microsia-gateway/issues"
+  },
+  "homepage": "https://github.com/consocia/microsia-gateway",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "coveralls": "^3.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "react": "^16.9.0"
+  }
+}
