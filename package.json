@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/consocia/microsia-gateway",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
